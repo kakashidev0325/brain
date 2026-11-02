@@ -1,0 +1,11 @@
+import{m as d,p as c,F as n,e as p}from"./layout-DQNtl7TS.js";import{N as l}from"./network-C32dV2Rj.js";const h=l.service,o=d({title:"Points",nav:"points",description:"Points for every task Jev accepts on BrainChain, counted weekly per address.",body:`
+    <section class="page">
+      ${c("Points","Points for accepted work.","Every week, each address whose task Jev accepted earns points: one for every 0.01 USDG of accepted bounty, counting up to 100 USDG per address per week. A task counts in the week its bounty is paid out, when its dispute window closes. Tasks paid on the Submit a task page or over x402 count for the address that paid. BrainChain's own wallets earn no points.")}
+      <p class="hint" id="round" role="status">Loading the current round…</p>
+      <table class="data-table leaderboard card-table" id="points" hidden>
+        <thead><tr><th scope="col">#</th><th scope="col">Address</th><th scope="col">Points</th></tr></thead>
+        <tbody></tbody>
+      </table>
+      <p class="note" id="empty" hidden></p>
+      <p><a href="/post">Submit a task</a> to start earning.</p>
+    </section>`});try{const s=await fetch(`${h}/rewards`,{signal:AbortSignal.timeout(15e3)});if(!s.ok)throw new Error(String(s.status));const t=await s.json();o.querySelector("#round").textContent=`Week ${t.current.round} runs from ${n(t.current.start)} to ${n(t.current.end)}, 00:00 UTC.`;const a=t.points.filter(e=>BigInt(e.points)>0n);if(a.length===0){const e=o.querySelector("#empty");e.textContent=t.closed===0?`No week has closed yet. The first closes on ${n(t.current.end)}.`:t.closed===1?"Week 1 closed with no points: no task paid for by an address that earns points was paid out that week.":`No points yet: no task paid for by an address that earns points was paid out in the ${t.closed} weeks that closed.`,e.hidden=!1}else{const e=o.querySelector("#points");e.tBodies[0].innerHTML=a.map((r,i)=>`<tr><td class="mono card-table__rank">${String(i+1).padStart(2,"0")}</td><th scope="row" class="mono">${p(r.account)}</th><td class="mono" data-label="Points">${BigInt(r.points).toLocaleString("en-US")}</td></tr>`).join(""),e.hidden=!1}}catch{o.querySelector("#round").textContent="Points could not be loaded right now. Try again in a minute."}

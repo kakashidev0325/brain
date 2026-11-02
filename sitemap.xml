@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://usebrainchain.com/</loc><priority>1.0</priority></url>
+  <url><loc>https://usebrainchain.com/bridge</loc><priority>0.7</priority></url>
+  <url><loc>https://usebrainchain.com/changes</loc><priority>0.7</priority></url>
+  <url><loc>https://usebrainchain.com/decisions</loc><priority>0.7</priority></url>
+  <url><loc>https://usebrainchain.com/explorer</loc><priority>0.7</priority></url>
+  <url><loc>https://usebrainchain.com/how-it-works</loc><priority>0.7</priority></url>
+  <url><loc>https://usebrainchain.com/models</loc><priority>0.7</priority></url>
+  <url><loc>https://usebrainchain.com/network</loc><priority>0.7</priority></url>
+  <url><loc>https://usebrainchain.com/operations</loc><priority>0.7</priority></url>
+  <url><loc>https://usebrainchain.com/points</loc><priority>0.7</priority></url>
+  <url><loc>https://usebrainchain.com/post</loc><priority>0.7</priority></url>
+  <url><loc>https://usebrainchain.com/privacy</loc><priority>0.7</priority></url>
+  <url><loc>https://usebrainchain.com/roadmap</loc><priority>0.7</priority></url>
+  <url><loc>https://usebrainchain.com/tasks</loc><priority>0.7</priority></url>
+  <url><loc>https://usebrainchain.com/terms</loc><priority>0.7</priority></url>
+  <url><loc>https://usebrainchain.com/testnet</loc><priority>0.7</priority></url>
+</urlset>
